@@ -1,3 +1,7 @@
 scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
 *valid_score, _, _= scores
-print(valid_score)
+#print(valid_score)
+
+b = 40
+var = '12314'
+print(b + int(var))
