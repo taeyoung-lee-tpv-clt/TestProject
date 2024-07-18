@@ -1,0 +1,2 @@
+export RUN_ENVIRONMENT=development
+python main.py
