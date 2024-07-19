@@ -3,4 +3,4 @@ python - redis, bff, ansible
 
 
 
-#docker build -t <your style name> -f Dockerfile ..
+docker build -t <your style name> -f Dockerfile ..
