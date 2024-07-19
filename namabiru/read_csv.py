@@ -24,7 +24,7 @@ def get_df_data(file_path, csv_path):
     new_df = df[selected]
 
 
-    chunk_size = 10
+    chunk_size = 5
     for start in range(0, len(new_df),chunk_size):
         chunk = df[start:start + chunk_size]
         data = {}

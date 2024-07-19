@@ -2,8 +2,8 @@
 # from common.logging import logger
 from namabiru.read_csv import get_df_data
 
-file_path = './pricing.xlsx'
-csv_path = './pricing.csv'
+file_path = './.xlsx'
+csv_path = './.csv'
 
 def serve():
     get_df_data(file_path,csv_path)
