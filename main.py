@@ -1,10 +1,13 @@
-from concurrent import futures
-from common.logging import logger
-from ConceptAcpt.redis_server.redisServer import redis_server_main
+# from concurrent import futures
+# from common.logging import logger
+from namabiru.read_csv import get_df_data
+
+file_path = './pricing.xlsx'
+csv_path = './pricing.csv'
 
 def serve():
-    redis_server_main()
+    get_df_data(file_path,csv_path)
 
 if __name__ == "__main__":
-    logger.info("Redis Server Start!")
+    print("Redis Server Start!")
     serve()
