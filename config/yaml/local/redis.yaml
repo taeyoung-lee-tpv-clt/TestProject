@@ -1,0 +1,59 @@
+# Redis 설정 파일 예제
+
+server:
+  port: 6379
+  bind: 127.0.0.1
+  maxclients: 10000
+  databases: 16
+
+persistence:
+  dbfilename: dump.rdb
+  dir: ./
+  appendonly: yes
+  appendfilename: appendonly.aof
+  appendfsync: everysec
+  save:
+    - interval: 900
+      changes: 1
+    - interval: 300
+      changes: 10
+    - interval: 60
+      changes: 10000
+
+logging:
+  loglevel: notice
+  logfile: ""
+
+memory:
+  maxmemory: 256mb
+  maxmemory-policy: allkeys-lru
+
+replication:
+  # replicaof: <master-ip> <master-port>
+  # masterauth: <master-password>
+
+security:
+  requirepass: mystrongpassword
+
+cluster:
+  enabled: yes
+  config-file: nodes.conf
+  node-timeout: 5000
+
+connections:
+  timeout: 0
+  tcp-keepalive: 300
+
+lua:
+  time-limit: 5000
+
+daemon:
+  daemonize: yes
+  supervised: no
+
+optimization:
+  hash-max-ziplist-entries: 512
+  hash-max-ziplist-value: 64
+  list-max-ziplist-size: -2
+  zset-max-ziplist-entries: 128
+  zset-max-ziplist-value: 64
